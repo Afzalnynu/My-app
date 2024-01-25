@@ -1,0 +1,18 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Markes</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let info of markes">
+            <td>{{info.name |uppercase}}</td>
+            <td>{{info.sub |lowercase}}</td>
+            <td [ngStyle]="{'background-color':info.markes<35?'red':'green'}">{{info.markes }}</td>
+            <td [ngClass]="{'red':info.markes<35,'green':info.markes>=35}">{{info.result}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.Parent{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(14, 132, 235);
+    margin: 0px;
+}
+.top{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(8, 114, 128);
+    display: flex;
+    padding-top: 10px;
+    /* flex-wrap: wrap; */
+}
+.bottom{
+    height: 70%;
+    width: 100%;
+}
+.Bottom-tabel{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(76, 77, 75);
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    /* text-transform: capitalize; */
+}
+button{
+    margin: 5px;
+    font-size: 15px;
+}
+.top-left{
+    height: 100%;
+    width: 60%;
+}
+.top-right{
+    height: 100%;
+    width: 40%;
+}
+label{
+    margin-top: 5px;
+
+}
+p{
+    display: inline-block;
+    text-transform: capitalize;
+}

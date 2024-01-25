@@ -1,0 +1,35 @@
+.parent{
+    height: 100vh;
+    width: 100%;
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    background-color: antiquewhite;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 700;
+}
+button{
+    margin-top: 8px;
+    margin-left: 5px;
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 8px;
+    padding: 7px;
+
+}
+h1{
+    text-transform: uppercase;
+    font-size: 25px;
+}

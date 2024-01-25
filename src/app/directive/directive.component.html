@@ -1,0 +1,34 @@
+<h1 *ngIf="false">Directive</h1>
+
+<h1 *ngFor="let number of numbers">My number is {{number}}</h1>
+<ol>
+    <li *ngFor="let state of states">{{state}}</li>
+</ol>
+
+<select name="" id="">
+    <option value="" *ngFor="let state of states">{{state}}</option>
+</select>
+<h1 *ngFor="let use of user"> My name {{use.name}} with age {{use.age}}</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let use of user">
+            <td>{{use.name}}</td>
+            <td>{{use.age}}</td>
+            <td>{{use.phone}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngFor="let use of user">
+    <h3>Name:{{use.name}}</h3>
+    <h3>Age:{{use.age}}</h3>
+    <h3>phone:{{use.phone}}</h3>
+</div>

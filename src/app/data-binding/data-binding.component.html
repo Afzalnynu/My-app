@@ -1,0 +1,18 @@
+<div class="parent">
+    <div>
+        <!-- Interpolation -->
+        <p>My name is{{name}}</p>
+        <p>My age is {{age}}</p>
+        <p>My ages is {{ages}}</p>
+        <p>My names is {{names}}</p>
+        <p>user:{{user.name}}</p>
+
+        <!-- Event binding -->
+        <button (click)="submit()">submit</button><br>
+        <input type="text" (keypress)="key()"><br><br>
+
+        <!-- Two Way data binding -->
+        <input type="text" name="" id="" [(ngModel)] = "phone">
+        <p>{{phone}}</p>
+    </div>
+</div>
