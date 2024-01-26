@@ -2,39 +2,64 @@
     <div style="display: flex;">
         <div class="child-top">
             <h1>employee details</h1>
-            <button class="btn btn-primary m-2">experiance from high to low</button>
-            <button class="btn btn-primary">experiance from low to high</button>
-            <button class="btn btn-warning m-2">package from high to low</button>
-            <button class="btn btn-warning">package from low to high</button>
-            <button class="btn btn-dark m-2">Hike 20%</button>
-            <button class="btn btn-dark">Bonus</button>
-            <button class="btn btn-success m-2">Junior Developers</button>
-            <button class="btn btn-success ">Senior Developers</button>
-            <button class="btn btn-info m-2">Total CTC</button>
-            <button class="btn btn-info">Total employees</button>
+            <button class="btn btn-primary m-2" (click)="exp_high()">experiance from high to low</button>
+            <button class="btn btn-primary" (click)="exp_low()">experiance from low to high</button>
+            <button class="btn btn-warning m-2" (click)="pack_high()">package from high to low</button>
+            <button class="btn btn-warning" (click)="pack_low()">package from low to high</button>
+            <button class="btn btn-dark m-2" (click)="hike()">Hike 20%</button>
+            <button class="btn btn-dark" (click)="bonus()">Bonus</button>
+            <button class="btn btn-success m-2" (click)="junior()">Junior Developers</button>
+            <button class="btn btn-success " (click)="senior()">Senior Developers</button>
+            <button class="btn btn-info m-2" (click)="ctc()">Total CTC</button>
+            <button class="btn btn-info" (click)="total()">Total employees</button>
         </div>
         <div>
             <label for="">Name:</label>
-            <input type="text" name="" id="">
+            <input type="text" name="" id="" [(ngModel)]="emp.name">
             <br>
 
             <label for="">Company:</label>
-            <input type="text" name="" id="">
+            <input type="text" name="" id="" [(ngModel)]="emp.Company">
             <br>
 
             <label for="">Experiance:</label>
-            <input type="number" name="" id="">
+            <input type="text" name="" id="" [(ngModel)]="emp.Experiance">
             <br>
 
             <label for="">Package:</label>
-            <input type="number" name="" id="">
+            <input type="number" name="" id="" [(ngModel)]="emp.Package">
             <br>
 
             <label for="">Working Employee:</label>
-            <input type="text" name="" id="">
+            <input type="text" name="" id="" [(ngModel)]="emp.WorkingEmployee">
             <br>
+            <!-- <h1>{{emp}}</h1> -->
+
+            <button class="btn btn-primary" (click)="push()">Add Employee Details</button>
 
         </div>
     </div>
-    <div class="child-bottom"></div>
+    <div class="child-bottom table table-dark">
+        <table>
+            <thead>
+                <tr>
+                    <!-- <th>S.no</th> -->
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Experiance</th>
+                    <th>Package</th>
+                    <th>Working Employee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let worker of empolyee" let i=0>
+                    <td>{{worker.name}}</td>
+                    <td>{{worker.Company}}</td>
+                    <td>{{worker.Experiences}}</td>
+                    <td>{{worker.Package}}</td>
+                    <td>{{worker.WorkingEmployee}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

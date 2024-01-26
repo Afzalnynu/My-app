@@ -10,3 +10,10 @@
 input{
     margin: 5px;
 }
+td{
+    text-align: center;
+}
+table{
+    height: 100vh;
+    width: 100%;
+}
