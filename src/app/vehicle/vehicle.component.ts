@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VehicleService } from '../vehicle.service';
 
 @Component({
   selector: 'app-vehicle',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./vehicle.component.css']
 })
 export class VehicleComponent {
+  public vehicles:any=[];
 
+  constructor(private _vehicleService:VehicleService){
+    _vehicleService.getVehicles().subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+      },
+      (err:any)=>{
+        alert("Internal service error")
+      }
+    )
+  }
 }

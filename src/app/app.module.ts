@@ -23,6 +23,9 @@ import { RegisterationComponent } from './registeration/registeration.component'
 import { CarComponent } from './car/car.component';
 import { EmployTableComponent } from './employ-table/employ-table.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AccountsComponent } from './accounts/accounts.component';
+import { PhotoesComponent } from './photoes/photoes.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +48,15 @@ import { VehicleComponent } from './vehicle/vehicle.component';
     RegisterationComponent,
     CarComponent,
     EmployTableComponent,
-    VehicleComponent
+    VehicleComponent,
+    AccountsComponent,
+    PhotoesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

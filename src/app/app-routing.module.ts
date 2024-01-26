@@ -16,6 +16,9 @@ import { ProductComponent } from './product/product.component';
 import { RegisterationComponent } from './registeration/registeration.component';
 import { CarComponent } from './car/car.component';
 import { EmployTableComponent } from './employ-table/employ-table.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { PhotoesComponent } from './photoes/photoes.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -33,7 +36,10 @@ const routes: Routes = [
     {path:"product", component:ProductComponent},
     {path:"registration",component:RegisterationComponent},
     {path:"car", component:CarComponent},
-    {path:"employee",component:EmployTableComponent}
+    {path:"employee",component:EmployTableComponent},
+    {path:"vehicle",component:VehicleComponent},
+    {path:"accounts",component:AccountsComponent},
+    {path:"photoes",component:PhotoesComponent}
 
   ]},
   {path:'',component:LoginComponent},
