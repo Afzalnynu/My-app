@@ -10,6 +10,7 @@
     width: 30%;
     background-color: blueviolet;
     text-align: center;
+    overflow: auto;
 }
 .right{
     height: 100%;

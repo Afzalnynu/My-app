@@ -19,6 +19,10 @@ import { MarksComponent } from './marks/marks.component';
 import { ProductComponent } from './product/product.component';
 import { PipePipe } from './pipe.pipe';
 import { RatingPipe } from './rating.pipe';
+import { RegisterationComponent } from './registeration/registeration.component';
+import { CarComponent } from './car/car.component';
+import { EmployTableComponent } from './employ-table/employ-table.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { RatingPipe } from './rating.pipe';
     MarksComponent,
     ProductComponent,
     PipePipe,
-    RatingPipe
+    RatingPipe,
+    RegisterationComponent,
+    CarComponent,
+    EmployTableComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,

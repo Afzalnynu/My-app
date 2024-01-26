@@ -1,0 +1,15 @@
+<div>
+    <h1>Cars</h1>
+
+    <label for="audi" (click)="img(1)">Audi</label>
+    <input type="radio" name="abc" id="audi" (click)="img(1)">
+
+    <label for="benz" (click)="img(2)">Benz</label>
+    <input type="radio" name="abc" id="benz" (click)="img(2)">
+
+    <label for="bmw" (click)="img(3)">BMW</label>
+    <input type="radio" name="abc" id="bmw" (click)="img(3)">
+
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.audi-mediacenter.com%2Fen%2Fphotos&psig=AOvVaw1qi8k1FKY7LcigX-Wrgs-v&ust=1706267659575000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOi_oL60-IMDFQAAAAAdAAAAABAE" alt="" *ngIf="this.carsImage">
+
+</div>

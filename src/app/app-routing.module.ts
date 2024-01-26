@@ -13,6 +13,9 @@ import { BmiComponent } from './bmi/bmi.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { MarksComponent } from './marks/marks.component';
 import { ProductComponent } from './product/product.component';
+import { RegisterationComponent } from './registeration/registeration.component';
+import { CarComponent } from './car/car.component';
+import { EmployTableComponent } from './employ-table/employ-table.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -27,7 +30,10 @@ const routes: Routes = [
     {path:'bmi',component:BmiComponent},
     {path:"directive",component:DirectiveComponent},
     {path:"marks",component:MarksComponent},
-    {path:"product", component:ProductComponent}
+    {path:"product", component:ProductComponent},
+    {path:"registration",component:RegisterationComponent},
+    {path:"car", component:CarComponent},
+    {path:"employee",component:EmployTableComponent}
 
   ]},
   {path:'',component:LoginComponent},
