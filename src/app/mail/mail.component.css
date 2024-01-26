@@ -1,0 +1,9 @@
+p{
+    text-transform: capitalize;
+}
+p:hover{
+    background-color: darkgray;
+}
+.child{
+    cursor: pointer;
+}

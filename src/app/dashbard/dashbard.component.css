@@ -28,6 +28,8 @@ button{
 }
 h1{
     cursor: pointer;
+    font-size: 20px;
+    font-style: italic;
 
 }
 h1:hover{

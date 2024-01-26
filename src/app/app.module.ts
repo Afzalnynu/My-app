@@ -26,6 +26,9 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccountsComponent } from './accounts/accounts.component';
 import { PhotoesComponent } from './photoes/photoes.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { ActivityComponent } from './activity/activity.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { PhotoesComponent } from './photoes/photoes.component';
     EmployTableComponent,
     VehicleComponent,
     AccountsComponent,
-    PhotoesComponent
+    PhotoesComponent,
+    FlipkartComponent,
+    MailComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,9 @@ import { EmployTableComponent } from './employ-table/employ-table.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { PhotoesComponent } from './photoes/photoes.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { ActivityComponent } from './activity/activity.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -39,7 +42,10 @@ const routes: Routes = [
     {path:"employee",component:EmployTableComponent},
     {path:"vehicle",component:VehicleComponent},
     {path:"accounts",component:AccountsComponent},
-    {path:"photoes",component:PhotoesComponent}
+    {path:"photoes",component:PhotoesComponent},
+    {path:"flipkart",component:FlipkartComponent},
+    {path:"mail",component:MailComponent},
+    {path:"activity",component:ActivityComponent}
 
   ]},
   {path:'',component:LoginComponent},
