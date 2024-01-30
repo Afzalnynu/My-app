@@ -29,6 +29,7 @@ import { PhotoesComponent } from './photoes/photoes.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { ActivityComponent } from './activity/activity.component';
+import { StudentsComponent } from './students/students.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ActivityComponent } from './activity/activity.component';
     PhotoesComponent,
     FlipkartComponent,
     MailComponent,
-    ActivityComponent
+    ActivityComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,

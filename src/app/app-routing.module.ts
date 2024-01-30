@@ -22,6 +22,7 @@ import { PhotoesComponent } from './photoes/photoes.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { ActivityComponent } from './activity/activity.component';
+import { StudentsComponent } from './students/students.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -45,7 +46,8 @@ const routes: Routes = [
     {path:"photoes",component:PhotoesComponent},
     {path:"flipkart",component:FlipkartComponent},
     {path:"mail",component:MailComponent},
-    {path:"activity",component:ActivityComponent}
+    {path:"activity",component:ActivityComponent},
+    {path:"students",component:StudentsComponent}
 
   ]},
   {path:'',component:LoginComponent},

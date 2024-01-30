@@ -1,0 +1,36 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: dimgray;
+    /* overflow: auto; */
+    flex-wrap: wrap;
+    display: flex;
+
+}
+.student-details{
+    /* height: 400px; */
+    width: 300px;
+    background-color: rgb(248, 237, 237);
+    text-align: center;
+    margin: 10px;
+    padding-top: 5px;
+    max-height:  400px;
+}
+h2{
+    font-size: 20px;
+    font-family: serif;
+    margin: 2px;
+}
+h1{
+    font-size: 20px;
+}
+.btn-search{
+    background-color: blue;
+    height: 30px;
+    width: 100px;
+}
+.btn-search-disable{
+    background-color: rgb(211, 242, 111);
+    height: 30px;
+    width: 100px;
+}

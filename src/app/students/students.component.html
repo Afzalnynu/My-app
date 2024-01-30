@@ -1,0 +1,35 @@
+<div>
+    <input type="text" name="" id="" [(ngModel)]="filter">
+    <!-- <button [ngClass]="{btn:true , 'btn-search': filter , 'btn-search-disable': !filter}" (click)="Search()" [disabled]="!filter">Search</button> -->
+    <button class="btn btn-primary" (click)="Search()">Search</button>
+
+    <select name="" id="" [(ngModel)]="column">
+        <option value="id" selected>Id</option>
+        <option value="name">Name</option>
+    </select>
+    <select name="" id="" [(ngModel)]="order">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+    </select>
+    <button class="btn btn-dark" (click)="sorting()">sort</button>
+
+    <select name="" id="" [(ngModel)]="page">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <button class="btn btn-warning" (click)="pages()">Page</button>
+    <div class="parent">
+            <div class="student-details" *ngFor="let student of students">
+                <img src="{{student.image}}" alt="">
+                <h1>{{student.name}}</h1>
+                <h2>IdNo:- {{student.id}}</h2>
+                <h2>{{student.phone}}</h2>
+                <h2>{{student.city}}</h2>
+                <h2>{{student.fee}}</h2>
+                <button class="btn btn-danger mb-2" (click)="delete(student.id)">Delete Info</button>
+            </div>
+    </div>
+</div>
