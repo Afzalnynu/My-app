@@ -23,10 +23,14 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { ActivityComponent } from './activity/activity.component';
 import { StudentsComponent } from './students/students.component';
+import { VehicleCarsComponent } from './vehicle-cars/vehicle-cars.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
-  {path:"dashbard", component:DashbardComponent,children:[
+  {path:"dashbard", component:DashbardComponent, canActivate:[AuthenticationGuard], children:[
     {path:"home", component:HomeComponent},
     {path:'',component:HomeComponent},
     {path:"about",component:AboutComponent},
@@ -47,7 +51,10 @@ const routes: Routes = [
     {path:"flipkart",component:FlipkartComponent},
     {path:"mail",component:MailComponent},
     {path:"activity",component:ActivityComponent},
-    {path:"students",component:StudentsComponent}
+    {path:"students",component:StudentsComponent},
+    {path:"vehicleCars",component:VehicleCarsComponent},
+    {path:"createAccount",component:CreateAccountComponent},
+    {path:"createStudentInfo",component:CreateStudentComponent}
 
   ]},
   {path:'',component:LoginComponent},

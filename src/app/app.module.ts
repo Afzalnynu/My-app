@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculaterComponent } from './calculater/calculater.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
@@ -30,6 +30,9 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { ActivityComponent } from './activity/activity.component';
 import { StudentsComponent } from './students/students.component';
+import { VehicleCarsComponent } from './vehicle-cars/vehicle-cars.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -58,13 +61,17 @@ import { StudentsComponent } from './students/students.component';
     FlipkartComponent,
     MailComponent,
     ActivityComponent,
-    StudentsComponent
+    StudentsComponent,
+    VehicleCarsComponent,
+    CreateAccountComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

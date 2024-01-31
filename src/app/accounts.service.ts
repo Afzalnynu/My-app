@@ -26,5 +26,9 @@ export class AccountsService {
     getPageAccount(page:number): Observable<any>{
       return this._httpService.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?limit=10&page="+page)
     }
+
+    createAccount(data:any):Observable<any>{
+      return this._httpService.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data)
+    }
   }
 
