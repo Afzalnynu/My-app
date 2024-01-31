@@ -1,0 +1,61 @@
+<div class="parent">
+    <h1>Create User Form</h1>
+    <form action="" [formGroup]="userForm">
+        <label for="">Name</label>
+        <input type="text" name="" id="" formControlName="name">
+        <br>
+
+        <label for="">Age</label>
+        <input type="number" name="" id="" formControlName="age">
+        <br>
+
+        <label for="">email</label>
+        <input type="email" name="" id="" formControlName="email">
+        <br>
+
+        <label for="">Phone</label>
+        <input type="number" name="" id="" formControlName="phone">
+        <br>
+
+        <div formGroupName="address">
+            <label for="">H no:</label>
+            <input type="text" name="" id="" formControlName="hno">
+            <br>
+
+            <label for="">State</label>
+            <input type="text" name="" id="" formControlName="state">
+            <br>
+
+            <label for="">Pincode</label>
+            <input type="text" name="" id="" formControlName="pincode">
+            <br>
+        </div>
+        <label for="">Cards</label>
+        <button (click)="add()" class="btn btn-info">Add</button>
+
+        <div formArrayName="cards">
+            <div *ngFor="let card of cardFromArray.controls, let i=index">
+                <div formGroupName="{{i}}">
+                    <h1>Card {{i+1}}</h1>
+                    <label for="">CardNo:</label>
+                    <input type="number" name="" id="" formControlName="cardno">
+                    <br>
+                    
+                    <label for="">Expary</label>
+                    <input type="month" name="" id="" formControlName="expary">
+                    <br>
+
+                    <label for="">CVV</label>
+                    <input type="number" name="" id="" formControlName="cvv"> 
+                    <button class="btn btn-danger ml-3 mb-2" (click)="deleteCard(i)">Delete</button>
+                    <br>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-warning" (click)="submit()">Submit</button>
+
+
+    </form>
+</div>
