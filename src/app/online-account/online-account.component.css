@@ -1,0 +1,38 @@
+.parent{
+    background-color: pink;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+}
+.top-child{
+    background-image: url("https://th.bing.com/th/id/OIP.zZI1MrFp_I_V0Ewm2BsnZAHaE7?rs=1&pid=ImgDetMain");
+    background-size: cover;
+    height:40%;
+    width: 100%;
+    position: relative;
+}
+.middle-child{
+    /* background-image: url("https://th.bing.com/th/id/OIP.jryuUgIHWL-1FVD2ww8oWgHaHa?rs=1&pid=ImgDetMain");
+    background-size: cover; */
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 190px;bottom: 320px;
+}
+.bottom-child{
+    text-align: center;
+    padding-top: 60px;
+    margin: 0;
+}
+input{
+    width: 20%;
+}

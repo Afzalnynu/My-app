@@ -28,6 +28,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { OnlineAccountComponent } from './online-account/online-account.component';
+import { StudentFormsComponent } from './student-forms/student-forms.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -56,7 +58,9 @@ const routes: Routes = [
     {path:"vehicleCars",component:VehicleCarsComponent},
     {path:"createAccount",component:CreateAccountComponent},
     {path:"createStudentInfo",component:CreateStudentComponent},
-    {path:"createUser", component:CreateUserComponent}
+    {path:"createUser", component:CreateUserComponent},
+    {path:"onlineAccount",component:OnlineAccountComponent},
+    {path:"studentform", component:StudentFormsComponent}
 
   ]},
   {path:'',component:LoginComponent},
