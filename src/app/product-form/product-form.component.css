@@ -1,0 +1,64 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+}
+.top-child{
+    height: 50%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+.top-left{
+    height: 100%;
+    width: 40%;
+    /* text-align: center; */
+    background-color: rgb(8, 168, 208);
+    padding: 0px 0px 0px 20px;
+    overflow: auto;
+}
+input{
+    margin: 5px;
+}
+label{
+    width: 120px;
+}
+.top-right{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(208, 48, 8);
+}
+.top-right-top{
+    height: 50%;
+    width: 100%;
+    background-color: rgb(8, 208, 31);
+    overflow: auto;
+}
+.top-right-bottom{
+    height: 50%;
+    width: 100%;
+    background-color: rgb(188, 208, 8);
+    overflow: auto;
+}
+.bottom-child{
+    height: 45%;
+    width: 100%;
+    background-color: rgb(218, 17, 17);
+    display: flex;
+}
+.bottom-left{
+    height: 100%;
+    width: 40%;
+    background-color: rgb(58, 8, 208);
+    padding: 10px 0 0 20px;
+    overflow: auto;
+
+}
+.bottom-right{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(208, 8, 105);
+}
+.color{
+    color: red;
+}

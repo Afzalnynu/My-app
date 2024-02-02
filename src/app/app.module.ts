@@ -37,6 +37,10 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { OnlineAccountComponent } from './online-account/online-account.component';
 import { StudentFormsComponent } from './student-forms/student-forms.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductTableComponent } from './product-table/product-table.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+
 
 @NgModule({
   declarations: [
@@ -72,7 +76,10 @@ import { ProductFormComponent } from './product-form/product-form.component';
     CreateUserComponent,
     OnlineAccountComponent,
     StudentFormsComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ProductTableComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+.parent{
+    background-color: darkgray;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: darkorange;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+}
+p{
+    margin: 0;
+    text-align: left;
+}

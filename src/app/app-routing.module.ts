@@ -30,6 +30,9 @@ import { AuthenticationGuard } from './authentication.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { OnlineAccountComponent } from './online-account/online-account.component';
 import { StudentFormsComponent } from './student-forms/student-forms.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductTableComponent } from './product-table/product-table.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -60,7 +63,10 @@ const routes: Routes = [
     {path:"createStudentInfo",component:CreateStudentComponent},
     {path:"createUser", component:CreateUserComponent},
     {path:"onlineAccount",component:OnlineAccountComponent},
-    {path:"studentform", component:StudentFormsComponent}
+    {path:"studentform", component:StudentFormsComponent},
+    {path:"productForm",component:ProductFormComponent},
+    {path:"productTabel",component:ProductTableComponent},
+    {path:"parent", component:ParentComponent}
 
   ]},
   {path:'',component:LoginComponent},

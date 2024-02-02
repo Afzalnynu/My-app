@@ -1,1 +1,251 @@
-<p>product-form works!</p>
+<div class="parent" [formGroup]="productForm">
+    <div class="top-child">
+        <div class="top-left">
+            <h2>Product Details</h2>
+            <label for="">Name:</label>
+            <input type="text" name="" id="" formControlName="name">
+            <br>
+
+            <div *ngIf="productForm.get('name')?.touched && productForm.get('name')?. invalid" class="color">
+                <p *ngIf="productForm.get('name')?.errors?.['required']">Name is required</p>
+                <p *ngIf="productForm.get('name')?.errors?.['minlength']">Minimum 3 char is required</p>
+                <p *ngIf="productForm.get('name')?.errors?.['maxlength']">Maximum 10 char is allowed</p>
+            </div>
+
+            <label for="">Price:</label>
+            <input type="number" name="" id="" formControlName="price">
+            <br>
+
+            <div *ngIf="productForm.get('price')?.touched && productForm.get('price')?.invalid" Class='color'>
+                <p *ngIf="productForm.get('price')?.errors?.['required']">Price is required</p>
+                <p *ngIf="productForm.get('price')?.errors?.['min']">Minimum 100Rs</p>
+                <p *ngIf="productForm.get('price')?.errors?.['max']">Maximum 100000Rs</p>
+            </div>
+
+            <label for="">Model:</label>
+            <input type="text" name="" id="" formControlName="model">
+            <br>
+
+            <div *ngIf="productForm.get('model')?.touched && productForm.get('model')?.invalid" Class="color">
+                <p *ngIf="productForm.get('model')?.errors?.['required']">Model is Required</p>
+                <p *ngIf="productForm.get('model')?.errors?.['minlength']">Minimum char is 3</p>
+                <p *ngIf="productForm.get('model')?.errors?.['maxlength']">Maximum char is 10</p>
+            </div>
+
+            <label for=""style="width: 120px;">FreeDelivery:</label>
+            <label for="" style="width: 20px;">Yes</label>
+            <input type="radio" name="freeDelivery" id="" value="Yes" formControlName="freeDelivery">
+            <label for="" style="width: 20px;">No</label>
+            <input type="radio" name="freeDelivery" id="" value="No" formControlName="freeDelivery">
+            <br>
+
+            <div *ngIf="productForm.get('freeDelivery')?.touched && productForm.get('freeDelivery')?.invalid" Class="color">
+                <p *ngIf="productForm.get('freeDelivery')?.errors?.['required']">freeDelivery is Required</p>
+            </div>
+
+            <label for="">Image</label>
+            <input type="text" name="" id="" formControlName="image">
+            <br>
+
+            <div *ngIf="productForm.get('image')?.touched && productForm.get('image')?.invalid" Class="color">
+                <p *ngIf="productForm.get('image')?.errors?.['required']">image is Required</p>
+            </div>
+
+            <div formGroupName="waranty">
+                <label for="">Eligible</label>
+                <label for="" style="width: 20px;">Yes</label>
+                <input type="radio" name="eligible" id="" value=true formControlName="eligible">
+                <label for="" style="width: 20px;">No</label>
+                <input type="radio" name="eligible" id="" value=false formControlName="eligible">
+                <br>
+
+                <label for="">Month</label>
+                <input type="number" name="" id="" formControlName="months">
+                <br>
+                <div *ngIf="productForm.get('waranty')?.get('months')?.touched && productForm.get('waranty')?.get('months')?.invalid" class="color">
+                    <p *ngIf="productForm.get('waranty')?.get('months')?.errors?.['required']">Month is Required </p>
+                </div>
+            </div>
+        </div>
+        <div class="top-right">
+            <div class="top-right-top">
+                <h2>Seller Info</h2>
+                <button class="btn btn-warning" (click)="addSeller()">Add Seller</button>
+                <div formArrayName="sellerInfo">
+                    <div *ngFor="let seller of sellerInfoArray.controls, let i =index">
+                        <div formGroupName="{{i}}">
+                            <label for="">Name:</label>
+                            <input type="text" formControlName="name">
+                            <br>
+
+                            
+                            <div formGroupName="address">
+                                <label for="">Line1:</label>
+                                <input type="text" name="" id="" formControlName="line1">
+                                <br>
+
+                                <div *ngIf="seller.get('address')?.get('line1')?.touched && seller.get('address')?.get('line1')?.invalid" class="color">
+                                    <p *ngIf="seller.get('address')?.get('line1')?.errors?.['required']">Line1 is Required </p>
+                                </div>
+
+                                <label for="">Area:</label>
+                                <input type="text" name="" id="" formControlName="area">
+                                <br>
+
+                                <div *ngIf="seller.get('address')?.get('area')?.touched && seller.get('address')?.get('area')?.invalid" class="color">
+                                    <p *ngIf="seller.get('address')?.get('area')?.errors?.['required']">Area is Required </p>
+                                </div>
+
+                                <label for="">City:</label>
+                                <input type="text" name="" id="" formControlName="city">
+                                <br>
+
+                                <div *ngIf="seller.get('address')?.get('city')?.touched && seller.get('address')?.get('city')?.invalid" class="color">
+                                    <p *ngIf="seller.get('address')?.get('city')?.errors?.['required']">City is Required </p>
+                                </div>
+
+                                <label for="">Pincode:</label>
+                                <input type="text" name="" id="" formControlName="pincode">
+                                <br>
+
+                                <div *ngIf="seller.get('address')?.get('pincode')?.touched && seller.get('address')?.get('pincode')?.invalid" class="color">
+                                    <p *ngIf="seller.get('address')?.get('pincode')?.errors?.['required']">Pincode is Required </p>
+                                </div>
+
+                                <button (click)="delete(i)" class="btn btn-danger">Delete</button>
+                                <hr>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-right-bottom">
+                <h2>Add Comment</h2>
+                <button (click)="addComment()" class="btn btn-warning">Add Data</button>
+                <div formArrayName="commentInfo">
+                    <div *ngFor="let comm of commentInfoArray.value,let i = index">
+                        <div formGroupName="{{i}}">
+                            <label for="">Time</label>
+                            <input type="time" name="" id="" formControlName="time">
+                            <br>
+
+                            <div *ngIf="comm.get('comments')?.get('time')?.touched && comm.get('comments')?.get('time')?.invalid" class="color">
+                                <p *ngIf="comm.get('comments')?.get('time')?.errors?.['required']">Time is Required </p>
+                            </div>
+
+                            <label for="">Comment</label>
+                            <textarea name="" id="" cols="50" rows="5"  formControlName="comment"></textarea>
+                            <br>
+                            <button (click)="delete1(i)" class="btn btn-danger">Delete</button>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-child">
+        <div class="bottom-left" formGroupName="ratings">
+            <h2>Rating Info</h2>
+            <label for="">One:</label>
+            <input type="text" name="" id="" formControlName="one">
+            <br>
+
+            <div *ngIf="productForm.get('ratings')?.get('one')?. touched && productForm.get('ratings')?.get('one')?.invalid" Class="color">
+                <p *ngIf="productForm.get('ratings')?.get('one')?.errors?.['required']">Ratings is Required</p>
+                <p *ngIf="productForm.get('ratings')?.get('one')?.errors?.['min']">Minimum 0</p>
+                <p *ngIf="productForm.get('ratings')?.get('one')?.errors?.['max']">Maximum 10000</p>
+            </div>
+
+            <label for="">Two:</label>
+            <input type="text" name="" id="" formControlName="two">
+            <br>
+
+            <div *ngIf="productForm.get('ratings')?.get('two')?. touched && productForm.get('ratings')?.get('two')?.invalid" Class="color">
+                <p *ngIf="productForm.get('ratings')?.get('two')?.errors?.['required']">Ratings is Required</p>
+                <p *ngIf="productForm.get('ratings')?.get('two')?.errors?.['min']">Minimum 0</p>
+                <p *ngIf="productForm.get('ratings')?.get('two')?.errors?.['max']">Maximum 10000</p>
+            </div>
+
+            <label for="">Three:</label>
+            <input type="text" name="" id="" formControlName="three">
+            <br>
+
+            <div *ngIf="productForm.get('ratings')?.get('three')?. touched && productForm.get('ratings')?.get('three')?.invalid" Class="color">
+                <p *ngIf="productForm.get('ratings')?.get('three')?.errors?.['required']">Ratings is Required</p>
+                <p *ngIf="productForm.get('ratings')?.get('three')?.errors?.['min']">Minimum 0</p>
+                <p *ngIf="productForm.get('ratings')?.get('three')?.errors?.['max']">Maximum 10000</p>
+            </div>
+
+            <label for="">Four:</label>
+            <input type="text" name="" id=""formControlName="four">
+            <br>
+
+            <div *ngIf="productForm.get('ratings')?.get('four')?. touched && productForm.get('ratings')?.get('four')?.invalid" Class="color">
+                <p *ngIf="productForm.get('ratings')?.get('four')?.errors?.['required']">Ratings is Required</p>
+                <p *ngIf="productForm.get('ratings')?.get('four')?.errors?.['min']">Minimum 0</p>
+                <p *ngIf="productForm.get('ratings')?.get('four')?.errors?.['max']">Maximum 10000</p>
+            </div>
+
+            <label for="">Five:</label>
+            <input type="text" name="" id="" formControlName="five">
+            <br>
+
+            <div *ngIf="productForm.get('ratings')?.get('five')?. touched && productForm.get('ratings')?.get('five')?.invalid" Class="color">
+                <p *ngIf="productForm.get('ratings')?.get('five')?.errors?.['required']">Ratings is Required</p>
+                <p *ngIf="productForm.get('ratings')?.get('five')?.errors?.['min']">Minimum 0</p>
+                <p *ngIf="productForm.get('ratings')?.get('five')?.errors?.['max']">Maximum 10000</p>
+            </div>
+
+        </div>
+        <div class="bottom-right">
+            <h2>Deliver Info</h2>
+            <label for="">Product Type:</label>
+            <input type="radio" name="productType" id="" value="Furniture" formControlName="productType">
+            <label for="">Furniture</label>
+            <input type="radio" name="productType" id="" value="Non Furniture" formControlName="productType">
+            <label for="">Non Furniture</label>
+
+            <div *ngIf="productForm.get('productType')?.value=='Furniture'">
+                <label for="">Width:</label>
+                <input type="number" name="" id="" formControlName="width">
+                <br>
+
+                <div *ngIf="productForm.get('width')?.touched && productForm.get('width')?. invalid" class="color">
+                    <p *ngIf="productForm.get('width')?.errors?.['required']">Width is required</p>
+                    <p *ngIf="productForm.get('width')?.errors?.['min']">Minimum 0</p>
+                    <p *ngIf="productForm.get('width')?.errors?.['max']">Maximum 10000</p>
+                </div>
+
+                <label for="">Height:</label>
+                <input type="number" name="" id="" formControlName="height">
+                <br>
+
+                <div *ngIf="productForm.get('height')?.touched && productForm.get('height')?. invalid" class="color">
+                    <p *ngIf="productForm.get('height')?.errors?.['required']">Height is required</p>
+                    <p *ngIf="productForm.get('height')?.errors?.['min']">Minimum 0</p>
+                    <p *ngIf="productForm.get('height')?.errors?.['max']">Maximum 10000</p>
+                </div>
+
+            </div>
+
+            <div *ngIf="productForm.get('productType')?.value=='Non Furniture'">
+                <label for="">Weight:</label>
+                <input type="number" name="" id="" formControlName="weight"><br>
+
+                <div *ngIf="productForm.get('weight')?.touched && productForm.get('weight')?. invalid" class="color">
+                    <p *ngIf="productForm.get('weight')?.errors?.['required']">weight is required</p>
+                    <p *ngIf="productForm.get('weight')?.errors?.['min']">Minimum 0</p>
+                    <p *ngIf="productForm.get('weight')?.errors?.['max']">Maximum 10000</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="height: 5%; width: 100%; text-align: center; background-color: white;">
+        <button (click)="submit()" class="btn btn-primary">Create Product</button>
+    </div>
+
+</div>
