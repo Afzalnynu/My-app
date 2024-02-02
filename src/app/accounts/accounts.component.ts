@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AccountsService } from '../accounts.service';
 import { subscribeOn } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
@@ -14,7 +15,7 @@ public coloum:string=""
 public order:string=""
 public page:number=0
 
-constructor(private _accountServices:AccountsService){
+constructor(private _accountServices:AccountsService, private _router:Router){
   _accountServices.getAccount().subscribe(
     (data:any)=>{
       this.accounts=data
@@ -64,6 +65,10 @@ pagination(){
       alert("Error")
     }
   )
+}
+
+edit(id:string){
+  this._router.navigateByUrl("/dashbard/edit-account/"+id);
 }
 
 }

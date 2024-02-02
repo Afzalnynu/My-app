@@ -30,5 +30,14 @@ export class AccountsService {
     createAccount(data:any):Observable<any>{
       return this._httpService.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data)
     }
+
+    getdata(id:string): Observable<any> {
+      return this._httpService.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id)
+    }
+
+    updataAccount(id:any,data:any): Observable<any>{
+      return this._httpService.put("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id,data)
+      }
+
   }
 
