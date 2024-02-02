@@ -74,8 +74,8 @@ delete(i:number){
 addComment(){
   this.commentInfoArray.push(
     new FormGroup({
-      time: new FormControl('',Validators.required),
-      comment: new FormControl('',Validators.required)
+      time: new FormControl('',[Validators.required]),
+      message : new FormControl()
     })
   )
 }

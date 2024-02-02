@@ -46,6 +46,7 @@
             </td>
             <td>{{vehicle.id}}</td>
             <td>
+                <button class="btn  btn-info mr-3" (click)="edit(vehicle.id)">Edit</button>
                 <button class="btn btn-danger" (click)="delete(vehicle.id)">Delete</button>
             </td>
         </tr>

@@ -6,22 +6,22 @@
             <br>
 
             <label for="">Class:</label>
-            <input type="number" name="" id="" formControlName="class"> 
+            <input type="text" name="" id="" formControlName="phone"> 
             <br>
 
             <label for="">Father Name:</label>
-            <input type="text" name="" id=""formControlName="fatherName"> 
+            <input type="text" name="" id=""formControlName="city"> 
             <br>
 
             <label for="">Email:</label>
-            <input type="text" name="" id="" formControlName="email"> 
+            <input type="text" name="" id="" formControlName="fee"> 
             <br>
 
             <label for="">DOB:</label>
-            <input type="month" name="" id="" formControlName="dob"> 
+            <input type="text" name="" id="" formControlName="image"> 
             <br>
 
-            <button (click)="submit()" class="btn btn-primary">Submit</button>
+            <button (click)="submit()" class="btn btn-primary">{{id ? "Update" : "Create"}}</button>
         </form>
     </div>
 </div>

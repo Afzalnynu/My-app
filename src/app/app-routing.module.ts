@@ -66,7 +66,9 @@ const routes: Routes = [
     {path:"studentform", component:StudentFormsComponent},
     {path:"productForm",component:ProductFormComponent},
     {path:"productTabel",component:ProductTableComponent},
-    {path:"parent", component:ParentComponent}
+    {path:"parent", component:ParentComponent},
+    {path:"edit-vehicle/:id",component:VehicleCarsComponent},
+    {path:"edit-student/:id",component:StudentFormsComponent}
 
   ]},
   {path:'',component:LoginComponent},

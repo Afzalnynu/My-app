@@ -1,10 +1,11 @@
 <div>
+    <h1>{{id ? "Update Vehicle": "Create Vehicle"}}</h1>
     <form action="" [formGroup]="vehicleForm">
         <label for="" >Vehicle</label>
-        <input type="text" name="" id="" formControlName="VehicleForms"><br>
+        <input type="text" name="" id="" formControlName="Vehicle"><br>
 
         <label for="">Manufacturrer</label>
-        <input type="text" name="" id="" formControlName="manufacturrer"><br>
+        <input type="text" name="" id="" formControlName="manufacturer"><br>
 
         <label for="">Model</label>
         <input type="text" name="" id="" formControlName="model"><br>
@@ -18,7 +19,7 @@
         <label for="">Image</label>
         <input type="text" name="" id=""formControlName="image"><br>
 
-        <button class="btn btn-warning" (click)="submit()">Submit</button>
+        <button class="btn btn-warning" (click)="submit()">{{id ? "Updata" : "Create"}}</button>
 
     </form>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StudentsService } from '../students.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-students',
@@ -13,7 +14,7 @@ export class StudentsComponent {
   public order:any="asc"
   public page:any=""
 
-  constructor(private _studentServer:StudentsService){
+  constructor(private _studentServer:StudentsService, private _router:Router ){
   _studentServer.getStudentDetails().subscribe(
     (data:any)=>{
       this.students=data
@@ -62,5 +63,9 @@ pages(){
       alert("Internal Error Occured")
     }
   )
+}
+
+edit(id:any){
+  this._router.navigateByUrl("/dashbard/edit-student/"+id);
 }
 }
