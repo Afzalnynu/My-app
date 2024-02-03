@@ -33,6 +33,9 @@ import { StudentFormsComponent } from './student-forms/student-forms.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ParentComponent } from './parent/parent.component';
+import { ClientComponent } from './client/client.component';
+import { ClientFormComponent } from './client-form/client-form.component';
+import { ClientService } from './client.service';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -69,7 +72,11 @@ const routes: Routes = [
     {path:"parent", component:ParentComponent},
     {path:"edit-vehicle/:id",component:VehicleCarsComponent},
     {path:"edit-student/:id",component:StudentFormsComponent},
-    {path:"edit-account/:id",component:CreateAccountComponent}
+    {path:"edit-account/:id",component:CreateAccountComponent},
+    {path:"client",component:ClientComponent},
+    {path:"client-form",component:ClientFormComponent},
+    {path:"edit-client",component:ClientComponent},
+    {path:"edit-product-tabel/:id",component:ProductFormComponent}
 
   ]},
   {path:'',component:LoginComponent},

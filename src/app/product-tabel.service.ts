@@ -17,5 +17,6 @@ export class ProductTabelService {
   deleteProductData(id:any):Observable<any>{
     return this._htppClient.delete("https://62abe711bd0e5d29af16f450.mockapi.io/products/"+id)
   }
+
 }
 

@@ -1,0 +1,21 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    width: 150px;
+}
+input{
+    margin: 5px;
+}
+.form{
+    height: 600px;
+    width: 600px;
+    background-color: darkcyan;
+    padding: 10px;
+    padding-left: 20px;
+}

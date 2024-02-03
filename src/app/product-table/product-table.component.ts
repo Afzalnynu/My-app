@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductTabelService } from '../product-tabel.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-table',
@@ -8,7 +9,7 @@ import { ProductTabelService } from '../product-tabel.service';
 })
 export class ProductTableComponent {
 public productData:any=[];
-constructor(private _productTabelService:ProductTabelService){
+constructor(private _productTabelService:ProductTabelService, private _router:Router){
   _productTabelService.getProductdata().subscribe(
     (data:any)=>{
       this.productData=data
@@ -29,6 +30,10 @@ delete(id:string){
       alert("Internal Error Occured")
     }
   )
+}
+
+edit(id:any){
+  this._router.navigateByUrl("/dashbard/edit-product-tabel/"+id)
 }
 
 }

@@ -40,6 +40,8 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ClientComponent } from './client/client.component';
+import { ClientFormComponent } from './client-form/client-form.component';
 
 
 @NgModule({
@@ -80,6 +82,8 @@ import { ChildComponent } from './child/child.component';
     ProductTableComponent,
     ParentComponent,
     ChildComponent,
+    ClientComponent,
+    ClientFormComponent,
   ],
   imports: [
     BrowserModule,

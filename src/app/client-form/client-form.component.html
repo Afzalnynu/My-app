@@ -1,0 +1,51 @@
+<div class="parent">
+    <div class="form">
+        <form action="" [formGroup]="_studentsForm">
+            <h1 style="text-align: center;">Client Form</h1>
+            <label for="">Name:</label>
+            <input type="text" name="" id="" formControlName="name">
+            <br>
+
+            <label for="">Age:</label>
+            <input type="text" name="" id="" formControlName="age">
+            <br>
+
+            <label for="">Gender:</label>
+            <input type="text" name="" id="" formControlName="gender">
+            <br>
+
+            <div formGroupName="adderss">
+                <label for="">Street:</label>
+                <input type="text" name="" id="" formControlName="street">
+                <br>
+
+                <label for="">City:</label>
+                <input type="text" name="" id="" formControlName="city">
+                <br>
+
+                <label for="">Zip:</label>
+                <input type="text" name="" id="" formControlName="zip">
+                <br>
+
+                <label for="">Country:</label>
+                <input type="text" name="" id="" formControlName="country">
+                <br>
+            </div>
+
+            <label for="">Email:</label>
+            <input type="text" name="" id="" formControlName="email">
+            <br>
+
+            <label for="">Phone:</label>
+            <input type="text" name="" id="" formControlName="phone">
+            <br>
+
+            <label for="">GPA:</label>
+            <input type="text" name="" id="" formControlName="gpa">
+            <br>
+            <button class="btn btn-primary" style="margin: auto; display: block;" (click)="submit()">Submit</button>
+            
+        </form>
+
+    </div>
+</div>

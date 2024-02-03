@@ -1,0 +1,20 @@
+<div class="parent">
+    <div class="card" *ngFor="let student of students let i=index">
+        <h2 style="font-size: 20px; margin: 0;">Name: {{student.name}}</h2>
+        <p>Id No:{{i+1}}</p>
+        <p>Age: {{student.age}}</p>
+        <p>Gender: {{student.gender}}</p>
+        <p style="text-decoration: underline;">Address:-</p>
+        <p>Street: {{student.address.street}}</p>
+        <p>City: {{student.address.city}}</p>
+        <p>Zip: {{student.address.zip}}</p>
+        <p>Country: {{student.address.country}}</p>
+        <p>Email: {{student.email}}</p>
+        <p>Phone: {{student.phone}}</p>
+        <p>GPA: {{student.gpa}}</p>
+        <div>
+            <button class="btn btn-danger" (click)="delete(student.name)">Delete</button>
+            <button class="btn btn-warning" (click)="edit()">Edit</button>
+        </div>
+    </div>
+</div>
