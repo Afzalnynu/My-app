@@ -46,6 +46,9 @@ import { AnimalsComponent } from './animals/animals.component';
 import { SiblingsComponent } from './siblings/siblings.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingsComponent } from './ratings/ratings.component';
+import { RatingsChildComponent } from './ratings-child/ratings-child.component';
+import { TextareaComponent } from './textarea/textarea.component';
 
 
 @NgModule({
@@ -92,6 +95,9 @@ import { Sibling2Component } from './sibling2/sibling2.component';
     SiblingsComponent,
     Sibling1Component,
     Sibling2Component,
+    RatingsComponent,
+    RatingsChildComponent,
+    TextareaComponent,
   ],
   imports: [
     BrowserModule,
