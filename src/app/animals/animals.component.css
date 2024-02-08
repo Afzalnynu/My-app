@@ -1,0 +1,20 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-image: url("https://c.pxhere.com/photos/2f/54/animal_baby_blur_canine_cute_dog_eye_fur-1365672.jpg!d");
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.animals-Info{
+    height: 300px;
+    width: 300px;
+    background-color: blanchedalmond;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+h4{
+    margin: 0;
+}

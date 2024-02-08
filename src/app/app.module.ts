@@ -42,6 +42,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ClientComponent } from './client/client.component';
 import { ClientFormComponent } from './client-form/client-form.component';
+import { AnimalsComponent } from './animals/animals.component';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { ClientFormComponent } from './client-form/client-form.component';
     ChildComponent,
     ClientComponent,
     ClientFormComponent,
+    AnimalsComponent,
   ],
   imports: [
     BrowserModule,

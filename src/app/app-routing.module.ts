@@ -36,6 +36,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ClientComponent } from './client/client.component';
 import { ClientFormComponent } from './client-form/client-form.component';
 import { ClientService } from './client.service';
+import { AnimalsComponent } from './animals/animals.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -76,7 +77,8 @@ const routes: Routes = [
     {path:"client",component:ClientComponent},
     {path:"client-form",component:ClientFormComponent},
     {path:"edit-client",component:ClientComponent},
-    {path:"edit-product-tabel/:id",component:ProductFormComponent}
+    {path:"edit-product-tabel/:id",component:ProductFormComponent},
+    {path:"animals",component:AnimalsComponent}
 
   ]},
   {path:'',component:LoginComponent},

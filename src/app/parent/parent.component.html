@@ -1,2 +1,4 @@
-<p>parent works!</p>
-<app-child></app-child>
+<input type="text" [(ngModel)]="parent">
+<!-- <p>{{parent}}</p> -->
+<p>BP:- {{bp}}</p>
+<app-child [child]="parent" (bEvent)="catch($event)"></app-child>

@@ -1,0 +1,17 @@
+<div class="parent">
+    <div class="animals-Info" *ngFor="let animal of animals">
+        <h1>API:{{animal.API}}</h1>
+        <h3>Category:{{animal.Category}}</h3>
+        <h4>HTTP:{{animal.HTTP}}</h4>
+        <h4>Auth:{{animal.Auth}}</h4>
+        <h4>Cors:{{animal.Cors}}</h4>
+        <p>Description:{{animal.Description}}</p>
+        <a href="{{animal.Link}}" style="font-size: 20px;">About Animal</a>
+
+        <div>
+            <button class="btn btn-warning">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+        
+    </div>
+</div>
