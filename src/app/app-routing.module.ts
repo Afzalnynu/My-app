@@ -37,6 +37,7 @@ import { ClientComponent } from './client/client.component';
 import { ClientFormComponent } from './client-form/client-form.component';
 import { ClientService } from './client.service';
 import { AnimalsComponent } from './animals/animals.component';
+import { SiblingsComponent } from './siblings/siblings.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -78,7 +79,8 @@ const routes: Routes = [
     {path:"client-form",component:ClientFormComponent},
     {path:"edit-client",component:ClientComponent},
     {path:"edit-product-tabel/:id",component:ProductFormComponent},
-    {path:"animals",component:AnimalsComponent}
+    {path:"animals",component:AnimalsComponent},
+    {path:"siblings",component:SiblingsComponent}
 
   ]},
   {path:'',component:LoginComponent},
