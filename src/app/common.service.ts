@@ -13,13 +13,13 @@ export class CommonService {
   constructor() { }
 
   setValue(){
-    return this.countSub$.next(this.count++)
+    return this.countSub$.next(++this.count)
   }
   getValue(){
     return this.countSub$.asObservable();
   }
 
   RemoveValue(){
-    return this.countSub$.next(this.count--)
+    return this.countSub$.next(--this.count)
   }
 }
