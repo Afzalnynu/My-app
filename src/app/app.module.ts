@@ -49,6 +49,10 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { RatingsComponent } from './ratings/ratings.component';
 import { RatingsChildComponent } from './ratings-child/ratings-child.component';
 import { TextareaComponent } from './textarea/textarea.component';
+import { Calculater1Component } from './calculater1/calculater1.component';
+import { InputComponent } from './input/input.component';
+import { ButtonContainerComponent } from './button-container/button-container.component';
+import { InputCalculaterComponent } from './input-calculater/input-calculater.component';
 
 
 @NgModule({
@@ -98,6 +102,10 @@ import { TextareaComponent } from './textarea/textarea.component';
     RatingsComponent,
     RatingsChildComponent,
     TextareaComponent,
+    Calculater1Component,
+    InputComponent,
+    ButtonContainerComponent,
+    InputCalculaterComponent,
   ],
   imports: [
     BrowserModule,

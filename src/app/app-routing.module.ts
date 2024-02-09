@@ -39,6 +39,7 @@ import { ClientService } from './client.service';
 import { AnimalsComponent } from './animals/animals.component';
 import { SiblingsComponent } from './siblings/siblings.component';
 import { RatingsComponent } from './ratings/ratings.component';
+import { Calculater1Component } from './calculater1/calculater1.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -82,7 +83,8 @@ const routes: Routes = [
     {path:"edit-product-tabel/:id",component:ProductFormComponent},
     {path:"animals",component:AnimalsComponent},
     {path:"siblings",component:SiblingsComponent},
-    {path:"rating",component:RatingsComponent}
+    {path:"rating",component:RatingsComponent},
+    {path:"calculater1",component:Calculater1Component}
 
   ]},
   {path:'',component:LoginComponent},
