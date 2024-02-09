@@ -1,5 +1,5 @@
 import { Component, Directive, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, PreloadingStrategy, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashbardComponent } from './dashbard/dashbard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -40,6 +40,7 @@ import { AnimalsComponent } from './animals/animals.component';
 import { SiblingsComponent } from './siblings/siblings.component';
 import { RatingsComponent } from './ratings/ratings.component';
 import { Calculater1Component } from './calculater1/calculater1.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -84,7 +85,12 @@ const routes: Routes = [
     {path:"animals",component:AnimalsComponent},
     {path:"siblings",component:SiblingsComponent},
     {path:"rating",component:RatingsComponent},
-    {path:"calculater1",component:Calculater1Component}
+    {path:"calculater1",component:Calculater1Component},
+    {path:"about-company",component:AboutCompanyComponent},
+    {
+      path: 'contact',
+      loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+    }
 
   ]},
   {path:'',component:LoginComponent},
@@ -93,7 +99,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 

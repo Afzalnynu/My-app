@@ -53,6 +53,7 @@ import { Calculater1Component } from './calculater1/calculater1.component';
 import { InputComponent } from './input/input.component';
 import { ButtonContainerComponent } from './button-container/button-container.component';
 import { InputCalculaterComponent } from './input-calculater/input-calculater.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 @NgModule({
@@ -112,7 +113,8 @@ import { InputCalculaterComponent } from './input-calculater/input-calculater.co
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
