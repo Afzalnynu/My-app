@@ -54,6 +54,7 @@ import { InputComponent } from './input/input.component';
 import { ButtonContainerComponent } from './button-container/button-container.component';
 import { InputCalculaterComponent } from './input-calculater/input-calculater.component';
 import { AboutUsModule } from './about-us/about-us.module';
+import { CustompipePipe } from './custompipe.pipe';
 
 
 @NgModule({
@@ -107,6 +108,7 @@ import { AboutUsModule } from './about-us/about-us.module';
     InputComponent,
     ButtonContainerComponent,
     InputCalculaterComponent,
+    CustompipePipe,
   ],
   imports: [
     BrowserModule,

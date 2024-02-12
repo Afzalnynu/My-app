@@ -90,6 +90,10 @@ const routes: Routes = [
     {
       path: 'contact',
       loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+    },
+    {
+      path: 'app',
+      loadChildren: () => import('./to-do-app/to-do-app.module').then(m => m.ToDoAppModule)
     }
 
   ]},

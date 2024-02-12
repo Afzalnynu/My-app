@@ -1,0 +1,8 @@
+<div class="parent"*ngFor="let comment of comments; let i=index">
+    <h3>task:{{comment.task}}</h3>
+    <h3>Time: {{comment.time}}</h3>
+
+    <button class="btn btn-warning" (click)="view(comment)">View</button>
+    <button (click)="edit(comment)" >Edit</button>
+    <button (click)="delete(comment.i)">Delete</button>
+</div>

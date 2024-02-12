@@ -1,0 +1,12 @@
+.button-container{
+    height: 100px;
+    width: 80%;
+    background-color: cyan;
+    margin-top: 100px;
+}
+.create-button{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+}

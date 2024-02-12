@@ -1,0 +1,29 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+}
+.todo-container{
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    margin: 5px;
+    padding: 8px;
+}
+.todo-comment-container{
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    margin: 5px;
+    padding: 8px;
+}
+.todo-view-container{
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    margin: 5px;
+    padding: 8px;
+}

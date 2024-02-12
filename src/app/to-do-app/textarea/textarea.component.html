@@ -1,0 +1,16 @@
+<div>
+    <h1>ToDo</h1>
+
+    <form action="" [formGroup]="todoform">
+        <label for="">Task:</label>
+        <textarea name="" id="" cols="30" rows="5" formControlName="task"></textarea>
+        <br>
+
+        <label for="">Time:</label>
+        <input type="datetime-local" name="" id="" formControlName="time">
+        <br>
+    </form>
+    <div>
+        <app-createbutton (bEvent)="catch($event)"></app-createbutton>
+    </div>
+</div>
